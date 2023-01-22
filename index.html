@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
   <title>Frontend Mentor | Calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet" />
+
+  <script src="./js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="./js/script.js" defer></script>
 </head>
+
 <body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="calculator theme-1">
+    <div class="container">
+      <header class="calculator__header">
+        <h1 class="calculator__title">calc</h1>
+        <section class="calculator__themes themes">
+          <div class="themes__title">theme</div>
+          <div class="themes__switch themes-switch">
+            <div class="themes-switch__num">1</div>
+            <div class="themes-switch__num">2</div>
+            <div class="themes-switch__num">3</div>
+            <div class="themes-switch__switcher" id="theme-toggle">
+              <input type="radio" name="theme" value="dark" checked />
+              <input type="radio" name="theme" value="light"/>
+              <input type="radio" name="theme" value="neon"/>
+            </div>
+          </div>
+        </section>
+      </header>
+      <section class="calculator__output">
+        <input type="text" name="output" class="output__field" data-type="current-output" placeholder="0" readonly value=""/>
+      </section>
+      <section class="calculator__buttons">
+        <button class="btn btn-1" data-key-type="operand" value="7">7</button>
+        <button class="btn btn-1" data-key-type="operand" value="8">8</button>
+        <button class="btn btn-1" data-key-type="operand" value="9">9</button>
+        <button class="btn btn-3" data-key-type="del" value="del">del</button>
+        <button class="btn btn-1" data-key-type="operand" value="4">4</button>
+        <button class="btn btn-1" data-key-type="operand" value="5">5</button>
+        <button class="btn btn-1" data-key-type="operand" value="6">6</button>
+        <button class="btn btn-1" data-key-type="operator" value="+">+</button>
+        <button class="btn btn-1" data-key-type="operand" value="1">1</button>
+        <button class="btn btn-1" data-key-type="operand" value="2">2</button>
+        <button class="btn btn-1" data-key-type="operand" value="3">3</button>
+        <button class="btn btn-1" data-key-type="operator" value="-">-</button>
+        <button class="btn btn-1" data-key-type="operand" value=".">.</button>
+        <button class="btn btn-1" data-key-type="operand" value="0">0</button>
+        <button class="btn btn-1" data-key-type="operator" value="/">/</button>
+        <button class="btn btn-1" data-key-type="operator" value="x">x</button>
+        <button class="btn btn-3 btn-wide" data-key-type="reset" value="reset">reset</button>
+        <button class="btn btn-2 btn-wide" data-key-type="equals" value="=">=</button>
+      </section>
+    </div>
+  </main>
 </body>
+
 </html>
